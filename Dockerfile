@@ -3,9 +3,6 @@ MAINTAINER Francis Chong <francis@ignition.hk>
 
 ENV ELASTIC_SEARCH_PACKAGE elasticsearch-1.7.0
 
-# Define working directory
-WORKDIR /elasticsearch
-
 # Install curl
 RUN apt-get update && \
   apt-get install -y curl && \
