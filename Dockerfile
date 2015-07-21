@@ -9,7 +9,7 @@ WORKDIR /elasticsearch
 # Install Elasticsearch.
 RUN \
   cd / && \
-  wget https://download.elasticsearch.org/elasticsearch/elasticsearch/$ELASTIC_SEARCH_PACKAGE.tar.gz && \
+  curl -sSL https://download.elasticsearch.org/elasticsearch/elasticsearch/$ELASTIC_SEARCH_PACKAGE.tar.gz && \
   tar xvzf $ELASTIC_SEARCH_PACKAGE.tar.gz && \
   rm -f $ELASTIC_SEARCH_PACKAGE.tar.gz && \
   ln -s /$ELASTIC_SEARCH_PACKAGE /elasticsearch
