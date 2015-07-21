@@ -14,9 +14,7 @@ RUN apt-get update && \
 # Install Elasticsearch.
 RUN \
   cd / && \
-  curl -sSL https://download.elasticsearch.org/elasticsearch/elasticsearch/$ELASTIC_SEARCH_PACKAGE.tar.gz | \
-  tar xvzf $ELASTIC_SEARCH_PACKAGE.tar.gz && \
-  rm -f $ELASTIC_SEARCH_PACKAGE.tar.gz && \
+  curl -sSL https://download.elasticsearch.org/elasticsearch/elasticsearch/$ELASTIC_SEARCH_PACKAGE.tar.gz | tar xzC / && \
   ln -s /$ELASTIC_SEARCH_PACKAGE /elasticsearch
 
 # Define mountable directories.
