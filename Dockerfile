@@ -1,4 +1,4 @@
-FROM resin/rpi-java:jre-1.7.0
+FROM resin/rpi-java
 MAINTAINER Francis Chong <francis@ignition.hk>
 
 ENV ELASTIC_SEARCH_PACKAGE elasticsearch-1.7.0
