@@ -6,6 +6,10 @@ ENV ELASTIC_SEARCH_PACKAGE elasticsearch-1.7.0
 # Define working directory
 WORKDIR /elasticsearch
 
+# Install curl
+RUN apt-get install -y curl && \
+  rm -rf /var/lib/apt/lists/*
+
 # Install Elasticsearch.
 RUN \
   cd / && \
